@@ -1,0 +1,13 @@
+name: Mirror to Bitbucket
+on: [push, delete]
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - uses: sgtoj/git-mirror-action@v1
+      with:
+        source-repo: "git@github.com:yourusername/original-repo.git"
+        destination-repo: "https://x-token-auth:${{ secrets.BB_TOKEN }}@bitbucket.org/thapasachin572/test-bitbucket-repo.git"
