@@ -9,5 +9,5 @@ jobs:
         fetch-depth: 0
     - uses: sgtoj/git-mirror-action@v1
       with:
-        source-repo: "git@github.com:yourusername/original-repo.git"
+        source-repo: "git@github.com/sachinthapa119/test-bitbucket-repo.git"
         destination-repo: "https://x-token-auth:${{ secrets.BB_TOKEN }}@bitbucket.org/thapasachin572/test-bitbucket-repo.git"
