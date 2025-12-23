@@ -1,5 +1,8 @@
 name: Mirror to Bitbucket
-on: [push, delete]
+on:
+  push:
+  delete:
+  workflow_dispatch:
 jobs:
   mirror:
     runs-on: ubuntu-latest
