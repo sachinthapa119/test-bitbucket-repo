@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0
-    - uses: sgtoj/git-mirror-action@v1
+    - uses: devmasx/git-mirror-action@v1
       with:
         source-repo: "git@github.com/sachinthapa119/test-bitbucket-repo.git"
         destination-repo: "https://x-token-auth:${{ secrets.BB_TOKEN }}@bitbucket.org/thapasachin572/test-bitbucket-repo.git"
